@@ -1,0 +1,32 @@
+# ACME.ai Unified Control Catalog (sample)
+controls:
+  - id: AC-01
+    title: Access control policy
+    objective: Define/enforce least privilege & authentication requirements.
+    mappings:
+      iso27001_annex_a: ["A.5.15", "A.5.16"]
+      iso42001: ["5.1", "8.1"]
+      nist_ai_rmf: ["GOVERN 1.1", "MANAGE 4.2"]
+
+  - id: KR-01
+    title: Key management
+    objective: Protect cryptographic keys in KMS/HSM with rotation.
+    mappings:
+      iso27001_annex_a: ["A.8.24", "A.8.28"]
+      iso42001: ["8.1"]
+      nist_ai_rmf: ["MANAGE 3.1"]
+
+  - id: AI-RA-01
+    title: AI risk assessment
+    objective: Identify harms, likelihood, impact; record treatment.
+    mappings:
+      iso42001: ["6.1.2", "8.1"]
+      nist_ai_rmf: ["MAP 2.2", "MANAGE 1.3"]
+
+  - id: SUP-01
+    title: Supplier due diligence for AI/ML
+    objective: Assess third-party AI systems, data, and models before use.
+    mappings:
+      iso27001_annex_a: ["A.5.19"]
+      iso42001: ["8.1"]
+      nist_ai_rmf: ["GOVERN 5.1"]
