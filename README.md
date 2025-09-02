@@ -1,42 +1,15 @@
-name: AI Governance Gap Snapshot
+# ACME.ai — Security & GRC Portfolio (ISO 42001 flavored)
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
+This repo showcases an AI governance program for a fictional AI company.  
+It includes policies, controls, an AI risk register, and a CI workflow that produces an **ISO/IEC 42001 gap snapshot** on every push.
 
-jobs:
-  gap-assessment:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+## What’s inside
+- **Policies/Standards/Procedures** (audit-ready)
+- **Controls catalog** mapped to ISO 42001, ISO 27001, NIST AI RMF
+- **AI risk examples** (YAML + CSV)
+- **CI workflow** that builds a gap report artifact (`out/42001-gap.md`)
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+## How the CI works
+On every push, GitHub Actions runs a script that scans the `docs/` folder using the checklist in `ai/checklists/42001_checklist.yaml` and publishes the artifact under **Actions → latest run → Artifacts**.
 
-      - name: Install deps
-        run: pip install pyyaml tabulate
-
-      - name: Run ISO 42001 gap snapshot
-        run: |
-          python scripts/run_gap_assessment.py \
-            --docs docs \
-            --checklist ai/checklists/42001_checklist.yaml \
-            --out out/42001-gap.md
-
-      - name: Upload report artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: iso42001-gap-snapshot
-          path: out/42001-gap.md
-
-  secret-scan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Gitleaks
-        uses: zricethezav/gitleaks-action@v2
-        with:
-          args: "--redact --verbose"
-
+## Folder structure
