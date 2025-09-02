@@ -1,0 +1,20 @@
+system: Chatbot-Beta
+owner: product.ai@acme.example
+purpose: Customer support Q&A
+data_categories: [customer_queries, metadata]
+risks:
+  - id: R-001
+    title: Hallucinated harmful advice
+    likelihood: Medium
+    impact: High
+    treatment: Mitigate
+    controls: [AI-RA-01, AC-01]
+    notes: Add human-in-the-loop; strengthen retrieval grounding.
+  - id: R-002
+    title: Prompt injection leading to data exfiltration
+    likelihood: Medium
+    impact: High
+    treatment: Mitigate
+    controls: [AC-01, KR-01]
+    notes: Output filters; stricter allowlists.
+review_cadence: Quarterly
