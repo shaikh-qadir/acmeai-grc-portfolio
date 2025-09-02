@@ -1,0 +1,3 @@
+id,title,owner,likelihood,impact,treatment,status
+R-001,Hallucinated harmful advice,product.ai@acme.example,Medium,High,Mitigate,Open
+R-002,Prompt injection data exfiltration,product.ai@acme.example,Medium,High,Mitigate,Open
