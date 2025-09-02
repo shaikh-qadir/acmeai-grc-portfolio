@@ -1,0 +1,22 @@
+items:
+  - id: ISO42001-4.3
+    title: Define AIMS scope and boundaries
+    evidence_keywords: ["scope", "boundary", "AIMS", "in-scope", "out-of-scope"]
+  - id: ISO42001-5.1
+    title: Leadership & policy commitments
+    evidence_keywords: ["AI Policy", "leadership", "objectives", "roles"]
+  - id: ISO42001-6.1.2
+    title: AI risk assessment method and records
+    evidence_keywords: ["risk assessment", "treatment plan", "register"]
+  - id: ISO42001-7.2
+    title: Competence and training for AI roles
+    evidence_keywords: ["training", "competence", "role description"]
+  - id: ISO42001-8.1
+    title: Operational planning and control for AI lifecycle
+    evidence_keywords: ["SDLC", "MLOps", "change control", "model card"]
+  - id: ISO42001-9.1
+    title: Monitoring, measurement, and evaluation
+    evidence_keywords: ["metrics", "dashboard", "monitoring", "drift"]
+  - id: ISO42001-10.2
+    title: Nonconformity and continual improvement
+    evidence_keywords: ["corrective action", "lessons learned", "audit"]
